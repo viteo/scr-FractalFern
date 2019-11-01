@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Sharpsaver</RootNamespace>
+    <AssemblyName>Sharpsaver</AssemblyName>
+    <!--<TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>-->
+    <TargetFramework>net472</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Authors>viteo_sen</Authors>
+    <Company>viteo</Company>
+    <Description>A WPF Screensaver template with working Preview window.</Description>
+  </PropertyGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(TargetPath)&quot; &quot;$(TargetDir)$(TargetName).scr&quot;" />
+  </Target>
+</Project>

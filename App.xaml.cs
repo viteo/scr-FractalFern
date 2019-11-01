@@ -11,17 +11,18 @@ namespace Sharpsaver
         {
             base.OnStartup(args);
 
-            if (args.Args.Length == 0 || args.Args[0].ToLower().StartsWith("/c"))
-            {
-                //Show the configuration settings dialog box.
-                var settingsWindow = new SettingsView();
-                settingsWindow.Show();
-            }
-            else if (args.Args[0].ToLower().StartsWith("/s"))
+            if (args.Args.Length == 0 || args.Args[0].ToLower().StartsWith("/s"))
             {
                 //Start the screensaver in full-screen mode.
                 var screensaverWindow = new ScreensaverView();
                 screensaverWindow.Show();
+                
+            }
+            else if (args.Args[0].ToLower().StartsWith("/c"))
+            {
+                //Show the configuration settings dialog box.
+                var settingsWindow = new SettingsView();
+                settingsWindow.Show();
             }
             else if (args.Args[0].ToLower().StartsWith("/p"))
             {

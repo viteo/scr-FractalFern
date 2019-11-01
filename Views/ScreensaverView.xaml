@@ -17,26 +17,7 @@
         <Canvas Width="{Binding ElementName=ScreensaverWindow, Path=ActualWidth}"
                 Height="{Binding ElementName=ScreensaverWindow, Path=ActualHeight}"
                 x:Name="Field">
-            <Rectangle Width="200"
-                       Height="100"
-                       Fill="DodgerBlue"
-                       Stroke="White"
-                       StrokeThickness="5"
-                       Canvas.Left="50"
-                       Canvas.Top="100" />
-            <Ellipse Width="100"
-                     Height="200"
-                     Fill="MediumPurple"
-                     Panel.ZIndex="1"
-                     Canvas.Left="100"
-                     Canvas.Top="50"/>
-            <TextBlock FontSize="35"
-                       FontWeight="Bold"
-                       Foreground="LightGreen"
-                       Canvas.Left="60" 
-                       Canvas.Top="125"
-                       Panel.ZIndex="3"
-                       Text="Sharpsaver"/>
+            <Image x:Name="Image"/>
         </Canvas>
     </Viewbox>
 </Window>
